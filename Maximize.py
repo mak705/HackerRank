@@ -6,3 +6,4 @@ results = map(lambda x: sum(i**2 for i in x)%M, product(*N))
 print(max(results))
 
 (5^2 + 9^2 + 10^2)/ 1000 = 206
+ 
