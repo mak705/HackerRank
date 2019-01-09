@@ -6,6 +6,16 @@ f = [i for i in t if 'a' in i]
 print("{0:.12}".format(len(f)/len(t))) 
 
 
+from itertools import combinations
+
+N = int(input())
+L = input().split()
+K = int(input())
+C = list(combinations(L, K))
+F = filter(lambda c: 'a' in c, C)
+print("{0:.3}".format(len(list(F))/len(C)))
+
+
 '''The itertools module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination. Together, they form an iterator algebra making it possible to construct specialized tools succinctly and efficiently in pure Python.
 
 To read more about the functions in this module, check out their documentation here.
