@@ -5,8 +5,20 @@ N = (list(map(int, input().split()))[1:] for _ in range(K))
 results = map(lambda x: sum(i**2 for i in x)%M, product(*N))
 print(max(results))
 
-(5^2 + 9^2 + 10^2)/ 1000 = 206
+#(5^2 + 9^2 + 10^2)/ 1000 = 206
  
+K, M = [int(x) for x in input().split()]
+arrayN = []
+for _i_ in range(K):
+    arrayN.append([int(x) for x in input().split()][1:])
+    
+from itertools import product
+possible_combination = list(product(*arrayN))
+
+def func(nums):
+    return sum(x*x for x in nums) % M
+
+print(max(list(map(func, possible_combination))))
 
  '''"The next lines each contains an integer Ni followed by Ni space separated integers denoting the elements in the list."
 
