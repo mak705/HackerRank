@@ -15,3 +15,10 @@ if __name__ == '__main__':
 #1 2 2 3 3
 #[1, 2, 2]
 ############################
+def high(arr = []):
+    for i in range(len(arr)):
+        arr = list(set(arr))
+        #print (arr)
+        arr[arr.index(max(arr))] = 0
+        return max(arr)
+high([1,2,3,4,5,5])
