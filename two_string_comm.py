@@ -15,6 +15,7 @@ import sys
 # Complete the twoStrings function below.
 def twoStrings(s1, s2):
     return 'YES' if any(i in s2 for i in s1 ) else 'NO'
+    #return 'YES' if set(list(s1)) & set(list(s2)) != set() else 'NO'
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
